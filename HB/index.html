@@ -1,1 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hogwash Bragging | Bacon Game Studio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Creepster&display=swap" rel="stylesheet">
+    
+    <style>
+        body { 
+            font-family: 'Creepster', cursive; 
+            background-color: #000; 
+            color: #eee; 
+            margin: 0; 
+            text-align: center; 
+            letter-spacing: 1px;
+        }
 
+        /* Banner ukotvený nahoru */
+        header { 
+            width: 100%; 
+            aspect-ratio: 21 / 9; 
+            background: #000 url('Hogwas%20Bragging.jpg') no-repeat center top/cover; 
+            border-bottom: 4px solid #ff4757; 
+        }
+
+        .content { padding: 50px 20px; max-width: 1000px; margin: 0 auto; }
+        
+        h1 { font-size: 4rem; color: #ff4757; text-transform: uppercase; margin: 0; text-shadow: 4px 4px 0px #311; }
+        
+        .promo-text { 
+            font-size: 1.8rem; 
+            line-height: 1.4; 
+            color: #ffa502; 
+            margin: 30px 0; 
+            text-shadow: 2px 2px 5px #000;
+        }
+        
+        /* Sociální sítě */
+        .socials { display: flex; justify-content: center; gap: 15px; flex-wrap: wrap; margin-bottom: 50px; }
+        .socials a { 
+            text-decoration: none; color: #fff; background: #111; padding: 12px 25px; 
+            border-radius: 5px; border: 2px solid #ff4757; transition: 0.3s; font-size: 1.2rem;
+        }
+        .socials a:hover { background: #ff4757; color: #000; transform: scale(1.1) rotate(2deg); }
+
+        /* Galerie sjednocená pomocí object-fit */
+        .gallery { 
+            display: grid; 
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); 
+            gap: 15px; padding: 20px; 
+        }
+        .gallery img { 
+            width: 100%; 
+            height: 250px; 
+            object-fit: cover; 
+            border-radius: 5px; 
+            border: 2px solid #222; 
+            cursor: pointer; 
+            transition: 0.3s; 
+        }
+        .gallery img:hover { border-color: #ff4757; transform: translateY(-5px); filter: brightness(1.2); }
+
+        /* Fullscreen Overlay */
+        #overlay {
+            display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+            background: rgba(0,0,0,0.95); z-index: 1000; justify-content: center; align-items: center; cursor: zoom-out;
+        }
+        #overlay img { max-width: 95%; max-height: 95%; border: 3px solid #ff4757; box-shadow: 0 0 20px #ff4757; }
+
+        .back-btn { display: inline-block; margin: 40px 0; color: #666; text-decoration: none; font-size: 1.2rem; }
+        .back-btn:hover { color: #ff4757; }
+    </style>
+</head>
+<body>
+
+<header></header>
+
+<div id="overlay" onclick="this.style.display='none'">
+    <img id="fullImg" src="">
+</div>
+
+<div class="content">
+    <h1>Hogwash Bragging</h1>
+    <p class="promo-text">
+        Epic storytelling of 4 strangers who gathered at one table and brag about heroic deeds. 
+        The more they drink, the more they embellish their story, but who cares? 
+        As long as the story is worth listening to! Coming soon to Google Play.
+    </p>
+
+    <div class="socials">
+        <a href="https://www.facebook.com/share/17wG6582hP/" target="_blank">Facebook</a>
+        <a href="https://youtube.com/@kingsoflardpigas" target="_blank">YouTube</a>
+        <a href="https://www.tiktok.com/@kingsoflardpigas" target="_blank">TikTok</a>
+        <a href="https://www.instagram.com/kingsoflardpigas" target="_blank">Instagram</a>
+        <a href="https://x.com/kekelstvo" target="_blank">X (Twitter)</a>
+    </div>
+</div>
+
+<div class="gallery">
+    <img src="HB%20(1).png" onclick="showFull(this.src)">
+    <img src="HB%20(2).png" onclick="showFull(this.src)">
+    <img src="HB%20(3).png" onclick="showFull(this.src)">
+    <img src="HB%20(4).png" onclick="showFull(this.src)">
+    <img src="HB%20(5).png" onclick="showFull(this.src)">
+    <img src="HB%20(6).png" onclick="showFull(this.src)">
+</div>
+
+<a href="/" class="back-btn">← Back to Bacon Game Studio Base</a>
+
+<footer style="padding: 50px; color: #222;">&copy; 2026 BACON GAME STUDIO</footer>
+
+<script>
+    function showFull(src) {
+        document.getElementById('fullImg').src = src;
+        document.getElementById('overlay').style.display = 'flex';
+    }
+</script>
+
+</body>
+</html>
