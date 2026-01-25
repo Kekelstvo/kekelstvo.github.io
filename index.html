@@ -16,27 +16,34 @@
 <body>
 
 <header style="
-    height: 60vh; 
-    background: #000 url('BANNER.png') no-repeat center center/cover; 
+    width: 100%;
+    aspect-ratio: 21 / 9; /* Přizpůsob podle tvého banneru, klidně dej 16/9 */
+    background: #000 url('BANNER.png') no-repeat center center/cover;
+    border-bottom: 2px solid #ff4757;
+    margin: 0;
+    padding: 0;
+">
+</header>
+
+<section style="
     display: flex; 
-    flex-direction: column; 
-    justify-content: flex-end; 
-    align-items: center; 
-    border-bottom: 4px solid #ff4757;">
-    </header>
-
-<section style="display: flex; width: 100%; padding: 0; margin: 0; background-color: #000; flex-wrap: wrap; border-top: 2px solid #ff4757;">
+    width: 100%; 
+    padding: 0; 
+    margin: 0; 
+    background-color: #000; 
+    flex-wrap: nowrap; /* Tohle udrží 3 vedle sebe i při zoomu */
+">
     
-    <a href="/KOLP" style="flex: 1 1 33.333%; line-height: 0; overflow: hidden;">
-        <img src="Kings of Lard Pigas.jpg" alt="KOLP" style="width: 100%; height: auto; display: block; transition: filter 0.3s;" onmouseover="this.style.filter='brightness(1.2)'" onmouseout="this.style.filter='brightness(1)'">
+    <a href="/KOLP" style="flex: 1; line-height: 0;">
+        <img src="Kings of Lard Pigas.jpg" alt="KOLP" style="width: 100%; height: auto; display: block; border: 0;">
     </a>
 
-    <a href="/HB" style="flex: 1 1 33.333%; line-height: 0; overflow: hidden;">
-        <img src="Hogwas Bragging.jpg" alt="HB" style="width: 100%; height: auto; display: block; transition: filter 0.3s;" onmouseover="this.style.filter='brightness(1.2)'" onmouseout="this.style.filter='brightness(1)'">
+    <a href="/HB" style="flex: 1; line-height: 0;">
+        <img src="Hogwas Bragging.jpg" alt="HB" style="width: 100%; height: auto; display: block; border: 0;">
     </a>
 
-    <a href="https://assetstore.unity.com" target="_blank" style="flex: 1 1 33.333%; line-height: 0; overflow: hidden;">
-        <img src="Asset store.jpg" alt="Store" style="width: 100%; height: auto; display: block; transition: filter 0.3s;" onmouseover="this.style.filter='brightness(1.2)'" onmouseout="this.style.filter='brightness(1)'">
+    <a href="https://assetstore.unity.com" target="_blank" style="flex: 1; line-height: 0;">
+        <img src="Asset store.jpg" alt="Store" style="width: 100%; height: auto; display: block; border: 0;">
     </a>
 
 </section>
