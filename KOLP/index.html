@@ -15,9 +15,22 @@
         .content { padding: 50px 20px; max-width: 900px; margin: 0 auto; }
         .promo-text { font-size: 1.4rem; color: #ffa502; font-weight: bold; margin-bottom: 40px; }
         .socials { display: flex; justify-content: center; gap: 15px; flex-wrap: wrap; margin-bottom: 50px; }
-        .socials a { text-decoration: none; color: white; background: #333; padding: 10px 20px; border-radius: 5px; border: 1px solid #ff4757; }
-        .gallery { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 15px; padding: 20px; }
-        .gallery img { width: 100%; border-radius: 5px; border: 1px solid #222; }
+        .socials a { text-decoration: none; color: white; background: #333; padding: 10px 20px; border-radius: 5px; border: 1px solid #ff4757; transition: 0.3s; }
+        .socials a:hover { background: #ff4757; color: black; }
+        
+        /* --- OPRAVA GALERIE ZDE --- */
+        .gallery { display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 15px; padding: 20px; }
+        .gallery img { 
+            width: 100%; 
+            height: 250px; /* Pevná výška sjednotí mřížku */
+            object-fit: cover; /* Zajistí, že se obrázek nedeformuje, ale ořízne */
+            border-radius: 5px; 
+            border: 1px solid #222;
+            transition: transform 0.3s;
+        }
+        .gallery img:hover { transform: scale(1.05); border-color: #ff4757; }
+        /* --------------------------- */
+
     </style>
 </head>
 <body>
@@ -46,21 +59,3 @@
     <img src="KOLP%20PC%20(2).jpg">
     <img src="KOLP%20PC%20(3).jpg">
     <img src="KOLP%20PC%20(4).jpg">
-    <img src="KOLP%20PC%20(5).jpg">
-    <img src="KOLP%20APP%20(1).png">
-    <img src="KOLP%20APP%20(10).png">
-    <img src="KOLP%20APP%20(11).png">
-    <img src="KOLP%20APP%20(12).png">
-    <img src="KOLP%20APP%20(13).png">
-    <img src="KOLP%20APP%20(14).png">
-    <img src="KOLP%20APP%20(15).png">
-    <img src="KOLP%20APP%20(16).png">
-    <img src="KOLP%20APP%20(17).png">
-    <img src="KOLP%20APP%20(18).png">
-    <img src="KOLP%20APP%20(19).png">
-</div>
-
-<a href="/" style="color: #444; text-decoration: none;">← Back to Bacon Game Studio</a>
-
-</body>
-</html>
