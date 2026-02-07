@@ -35,6 +35,21 @@
             margin: 30px 0; 
             text-shadow: 2px 2px 5px #000;
         }
+
+        /* Google Play Badge - Stylování */
+        .play-btn {
+            display: inline-block;
+            margin: 20px 0 40px;
+            transition: transform 0.3s ease, filter 0.3s ease;
+        }
+        .play-btn img {
+            height: 90px; /* Dostatečně velké */
+            width: auto;
+        }
+        .play-btn:hover {
+            transform: scale(1.1) rotate(2deg);
+            filter: drop-shadow(0 0 15px #ff4757); /* Glow efekt */
+        }
         
         /* Sociální sítě - stylově */
         .socials { display: flex; justify-content: center; gap: 15px; flex-wrap: wrap; margin-bottom: 50px; }
@@ -88,6 +103,10 @@
         Lard Pigas in your quest for absolute urban dominance!
     </p>
 
+    <a href="https://play.google.com/store/apps/details?id=com.bacongamestudio.kingsoflardpigas&pcampaignid=web_share" target="_blank" class="play-btn">
+        <img alt="Get it on Google Play" src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png"/>
+    </a>
+
     <div class="socials">
         <a href="https://www.facebook.com/share/17wG6582hP/" target="_blank">Facebook</a>
         <a href="https://youtube.com/@kingsoflardpigas" target="_blank">YouTube</a>
@@ -102,30 +121,4 @@
     <img src="KOLP%20PC%20(2).jpg" onclick="showFull(this.src)">
     <img src="KOLP%20PC%20(3).jpg" onclick="showFull(this.src)">
     <img src="KOLP%20PC%20(4).jpg" onclick="showFull(this.src)">
-    <img src="KOLP%20PC%20(5).jpg" onclick="showFull(this.src)">
-    <img src="KOLP%20APP%20(1).png" onclick="showFull(this.src)">
-    <img src="KOLP%20APP%20(10).png" onclick="showFull(this.src)">
-    <img src="KOLP%20APP%20(11).png" onclick="showFull(this.src)">
-    <img src="KOLP%20APP%20(12).png" onclick="showFull(this.src)">
-    <img src="KOLP%20APP%20(13).png" onclick="showFull(this.src)">
-    <img src="KOLP%20APP%20(14).png" onclick="showFull(this.src)">
-    <img src="KOLP%20APP%20(15).png" onclick="showFull(this.src)">
-    <img src="KOLP%20APP%20(16).png" onclick="showFull(this.src)">
-    <img src="KOLP%20APP%20(17).png" onclick="showFull(this.src)">
-    <img src="KOLP%20APP%20(18).png" onclick="showFull(this.src)">
-    <img src="KOLP%20APP%20(19).png" onclick="showFull(this.src)">
-</div>
-
-<a href="/" class="back-btn">← Back to Bacon Game Studio Base</a>
-
-<footer style="padding: 50px; color: #222;">&copy; 2026 BACON GAME STUDIO</footer>
-
-<script>
-    function showFull(src) {
-        document.getElementById('fullImg').src = src;
-        document.getElementById('overlay').style.display = 'flex';
-    }
-</script>
-
-</body>
-</html>
+    <img src="KOLP%20PC%20(5
